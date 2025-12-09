@@ -6,9 +6,9 @@
 
 #1. Create Vectors
   subject_id = c(1:6)
-  gender = c('f', 'f', 'm', 'f', 'm', 'm')
-  age = c(23, 18, 37, 27, 32, 29)
-  depression = c(1, 0, 0, 1, 0, 1)
+  gender = sample(c("f", "m"), size = n, replace = TRUE)
+  age = sample(18:40, size = n, replace = TRUE)
+  depression = rbinom(n, size = 1, prob = 0.3)
   
 #2. Create Data Frame
   df = data.frame(subject_id, gender, age, depression)
